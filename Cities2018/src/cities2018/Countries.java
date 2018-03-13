@@ -55,8 +55,13 @@ public class Countries {
     }
     public Map<String,String> sortedByCapitals()
     {
-        
-        return null;
+        Map<String,String> map = new TreeMap();
+        for(String key : countries.keySet())
+        {
+            String value = countries.get(key);
+            map.put(value, key);
+        }
+        return map;
     }
     @Override
     public String toString() {
